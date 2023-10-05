@@ -1,6 +1,4 @@
-const { bubbleSort } = require("./bubble-sort");
-const { selectionSort } = require("./selection-sort");
-const { insertionSort } = require("./insertion-sort");
+const { bubbleSort, selectionSort, insertionSort } = require("./index");
 
 const config = {
   SHOW_NUMBERS_LOG: false,
