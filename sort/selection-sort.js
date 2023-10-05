@@ -14,10 +14,6 @@ function selectionSort(array) {
   }
 }
 
-// Test case
-
-const numbers = new Array(100).fill(0).map(n => Math.floor(Math.random() * 1000));
-console.time("SelectionSort");
-selectionSort(numbers);
-console.log(numbers);
-console.timeEnd("SelectionSort");
+module.exports = {
+  selectionSort
+};

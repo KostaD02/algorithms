@@ -13,10 +13,6 @@ function bubbleSort(array) {
   } while (isSwaped);
 }
 
-// Test case
-
-const numbers = new Array(100).fill(0).map(n => Math.floor(Math.random() * 1000));
-console.time("BubbleSort");
-bubbleSort(numbers);
-console.log(numbers);
-console.timeEnd("BubbleSort");
+module.exports = {
+  bubbleSort
+};
