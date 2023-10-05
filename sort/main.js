@@ -1,4 +1,4 @@
-const { bubbleSort, selectionSort, insertionSort } = require("./index");
+const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace } = require("./index");
 
 const config = {
   SHOW_NUMBERS_LOG: false,
@@ -19,13 +19,13 @@ function logSortData(name, func, numbersArray = numbers) {
   }
 }
 
-console.time("JSBuiltIn");
-const jsBuiltInSort = numbers.sort((a, b) => a - b);
-console.timeEnd("JSBuiltIn");
-if (config.SHOW_NUMBERS_LOG) {
-  console.log(jsBuiltInSort);
+function jsBuiltIn(array) {
+  array = array.sort((a, b) => a - b);
 }
 
+logSortData("JSBuiltIn", jsBuiltIn);
 logSortData("BubbleSort", bubbleSort);
 logSortData("SelectionSort", selectionSort);
 logSortData("InsertionSort", insertionSort);
+logSortData("MergeSortWithReturn", mergeSort);
+logSortData("MergeSortWithoutReturn", mergeSortInPlace);
