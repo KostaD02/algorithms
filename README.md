@@ -1,2 +1,4 @@
-# algorithms
-Usable algorithms written in JavaScript
+# Algorithms
+
+WIP
+
