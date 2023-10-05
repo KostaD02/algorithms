@@ -1,4 +1,4 @@
-function bubbleSort(array) {
+function bubbleSort(array = []) {
   let isSwaped = false;
   do {
     isSwaped = false;
