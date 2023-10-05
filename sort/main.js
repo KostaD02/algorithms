@@ -16,7 +16,7 @@ function logSortData(name, func, numbersArray = numbers) {
   console.time(name);
   func(array);
   console.timeEnd(name);
-  if (SHOW_NUMBERS_LOG) {
+  if (config.SHOW_NUMBERS_LOG) {
     console.log(array);
   }
 }
@@ -24,7 +24,7 @@ function logSortData(name, func, numbersArray = numbers) {
 console.time("JSBuiltIn");
 const jsBuiltInSort = numbers.sort((a, b) => a - b);
 console.timeEnd("JSBuiltIn");
-if (SHOW_NUMBERS_LOG) {
+if (config.SHOW_NUMBERS_LOG) {
   console.log(jsBuiltInSort);
 }
 
