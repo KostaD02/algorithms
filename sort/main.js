@@ -1,4 +1,4 @@
-const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace } = require("./index");
+const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace, quickSort } = require("./index");
 
 const config = {
   SHOW_NUMBERS_LOG: false,
@@ -12,10 +12,10 @@ const numbers = new Array(config.NUMBERS_SIZE).fill(0).map(n => Math.floor(Math.
 function logSortData(name, func, numbersArray = numbers) {
   const array = numbersArray;
   console.time(name);
-  func(array);
+  const empty = func(array);
   console.timeEnd(name);
   if (config.SHOW_NUMBERS_LOG) {
-    console.log(array);
+    console.log(empty ?? array);
   }
 }
 
@@ -29,3 +29,4 @@ logSortData("SelectionSort", selectionSort);
 logSortData("InsertionSort", insertionSort);
 logSortData("MergeSortWithReturn", mergeSort);
 logSortData("MergeSortWithoutReturn", mergeSortInPlace);
+logSortData("QuickSort", quickSort);
