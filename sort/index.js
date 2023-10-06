@@ -12,6 +12,10 @@ const { timSort } = require("./tim-sort");
 const { cocktailShakerSort } = require("./cocktailshaker-sort");
 const { cycleSort } = require("./cycle-sort");
 
+function jsBuiltIn(array) {
+  array = array.sort((a, b) => a - b);
+}
+
 module.exports = {
   bubbleSort,
   selectionSort,
@@ -26,5 +30,6 @@ module.exports = {
   shellSort,
   timSort,
   cocktailShakerSort,
-  cycleSort
+  cycleSort,
+  jsBuiltIn
 };
