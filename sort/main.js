@@ -12,6 +12,7 @@ const {
   shellSort,
   timSort,
   cocktailShakerSort,
+  cycleSort
 } = require("./index");
 
 const config = {
@@ -64,3 +65,4 @@ logSortData("BucketSort", bucketSort);
 logSortData("ShellSort", shellSort);
 logSortData("TimSort", timSort);
 logSortData("CocktailShakerSort", cocktailShakerSort);
+logSortData("CycleSort", cycleSort);
