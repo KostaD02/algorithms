@@ -1,13 +1,35 @@
-const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace, quickSort, heapSort, radixSort, countingSort, bucketSort, shellSort, timSort } = require("./index");
+const {
+  bubbleSort,
+  selectionSort,
+  insertionSort,
+  mergeSort,
+  mergeSortInPlace,
+  quickSort,
+  heapSort,
+  radixSort,
+  countingSort,
+  bucketSort,
+  shellSort,
+  timSort,
+  cocktailShakerSort,
+} = require("./index");
 
 const config = {
   SHOW_NUMBERS_LOG: false,
   RANDOM_MAX_NUMBER: 1000,
   RANDOM_MIN_NUMBER: 1,
-  NUMBERS_SIZE: 100
+  NUMBERS_SIZE: 100,
 };
 
-const numbers = new Array(config.NUMBERS_SIZE).fill(0).map(n => Math.floor(Math.random() * (config.RANDOM_MAX_NUMBER - config.RANDOM_MIN_NUMBER + 1)) + 1);
+const numbers = new Array(config.NUMBERS_SIZE)
+  .fill(0)
+  .map(
+    (n) =>
+      Math.floor(
+        Math.random() *
+          (config.RANDOM_MAX_NUMBER - config.RANDOM_MIN_NUMBER + 1)
+      ) + 1
+  );
 
 if (config.SHOW_NUMBERS_LOG) {
   console.log("unsorted array:", numbers);
@@ -27,6 +49,7 @@ function jsBuiltIn(array) {
   array = array.sort((a, b) => a - b);
 }
 
+console.log(`Array size: ${config.NUMBERS_SIZE}`);
 logSortData("JSBuiltIn", jsBuiltIn);
 logSortData("BubbleSort", bubbleSort);
 logSortData("SelectionSort", selectionSort);
@@ -40,3 +63,4 @@ logSortData("CountingSort", countingSort);
 logSortData("BucketSort", bucketSort);
 logSortData("ShellSort", shellSort);
 logSortData("TimSort", timSort);
+logSortData("CocktailShakerSort", cocktailShakerSort);

@@ -6,19 +6,19 @@ function countingSort(array = []) {
   const count = new Array(range).fill(0);
 
   for (let i = 0; i < array.length; i++) {
-      count[array[i] - min]++;
+    count[array[i] - min]++;
   }
 
   let index = 0;
 
   for (let i = 0; i < range; i++) {
-      while (count[i] > 0) {
-          array[index++] = i + min;
-          count[i]--;
-      }
+    while (count[i] > 0) {
+      array[index++] = i + min;
+      count[i]--;
+    }
   }
 }
 
 module.exports = {
-  countingSort
+  countingSort,
 };

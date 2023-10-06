@@ -22,5 +22,5 @@ function bucketSort(array = [], n) {
 }
 
 module.exports = {
-  bucketSort
+  bucketSort,
 };

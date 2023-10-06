@@ -15,5 +15,5 @@ function selectionSort(array = []) {
 }
 
 module.exports = {
-  selectionSort
+  selectionSort,
 };

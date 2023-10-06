@@ -13,5 +13,5 @@ function insertionSort(array = [], starting = 1, n = array.length) {
 }
 
 module.exports = {
-  insertionSort
+  insertionSort,
 };

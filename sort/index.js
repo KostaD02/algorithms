@@ -9,6 +9,7 @@ const { countingSort } = require("./counting-sort");
 const { bucketSort } = require("./bucket-sort");
 const { shellSort } = require("./shell-sort");
 const { timSort } = require("./tim-sort");
+const { cocktailShakerSort } = require("./cocktailshaker-sort");
 
 module.exports = {
   bubbleSort,
@@ -22,5 +23,6 @@ module.exports = {
   countingSort,
   bucketSort,
   shellSort,
-  timSort
+  timSort,
+  cocktailShakerSort,
 };

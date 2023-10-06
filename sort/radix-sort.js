@@ -29,5 +29,5 @@ function radixSort(array = []) {
 }
 
 module.exports = {
-  radixSort
+  radixSort,
 };

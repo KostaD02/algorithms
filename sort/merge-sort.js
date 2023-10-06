@@ -84,5 +84,5 @@ function mergeInPlace(array = [], start, middle, end) {
 
 module.exports = {
   mergeSort, // returning
-  mergeSortInPlace // void sort
+  mergeSortInPlace, // void sort
 };

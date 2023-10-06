@@ -19,5 +19,5 @@ function shellSort(array = []) {
 }
 
 module.exports = {
-  shellSort
+  shellSort,
 };

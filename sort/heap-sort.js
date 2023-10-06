@@ -36,5 +36,5 @@ function heapSort(array = []) {
 }
 
 module.exports = {
-  heapSort
+  heapSort,
 };
