@@ -8,6 +8,7 @@ const { radixSort } = require("./radix-sort");
 const { countingSort } = require("./counting-sort");
 const { bucketSort } = require("./bucket-sort");
 const { shellSort } = require("./shell-sort");
+const { timSort } = require("./tim-sort");
 
 module.exports = {
   bubbleSort,
@@ -20,5 +21,6 @@ module.exports = {
   radixSort,
   countingSort,
   bucketSort,
-  shellSort
+  shellSort,
+  timSort
 };

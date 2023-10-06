@@ -43,15 +43,15 @@ function mergeInPlace(array = [], start, middle, end) {
   const leftSize = middle - start + 1;
   const rightSize = end - middle;
 
-  const leftarrayay = new Array(leftSize);
-  const rightarrayay = new Array(rightSize);
+  const leftArray = new Array(leftSize);
+  const rightArray = new Array(rightSize);
 
   for (let i = 0; i < leftSize; i++) {
-    leftarrayay[i] = array[start + i];
+    leftArray[i] = array[start + i];
   }
 
   for (let j = 0; j < rightSize; j++) {
-    rightarrayay[j] = array[middle + 1 + j];
+    rightArray[j] = array[middle + 1 + j];
   }
 
   let i = 0;
@@ -59,24 +59,24 @@ function mergeInPlace(array = [], start, middle, end) {
   let k = start;
 
   while (i < leftSize && j < rightSize) {
-    if (leftarrayay[i] <= rightarrayay[j]) {
-      array[k] = leftarrayay[i];
+    if (leftArray[i] <= rightArray[j]) {
+      array[k] = leftArray[i];
       i++;
     } else {
-      array[k] = rightarrayay[j];
+      array[k] = rightArray[j];
       j++;
     }
     k++;
   }
 
   while (i < leftSize) {
-    array[k] = leftarrayay[i];
+    array[k] = leftArray[i];
     i++;
     k++;
   }
 
   while (j < rightSize) {
-    array[k] = rightarrayay[j];
+    array[k] = rightArray[j];
     j++;
     k++;
   }
