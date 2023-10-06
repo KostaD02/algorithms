@@ -1,4 +1,4 @@
-const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace, quickSort } = require("./index");
+const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace, quickSort, heapSort } = require("./index");
 
 const config = {
   SHOW_NUMBERS_LOG: false,
@@ -8,6 +8,10 @@ const config = {
 };
 
 const numbers = new Array(config.NUMBERS_SIZE).fill(0).map(n => Math.floor(Math.random() * (config.RANDOM_MAX_NUMBER - config.RANDOM_MIN_NUMBER + 1)) + 1);
+
+if (config.SHOW_NUMBERS_LOG) {
+  console.log("unsorted array:", numbers);
+}
 
 function logSortData(name, func, numbersArray = numbers) {
   const array = numbersArray;
@@ -30,3 +34,4 @@ logSortData("InsertionSort", insertionSort);
 logSortData("MergeSortWithReturn", mergeSort);
 logSortData("MergeSortWithoutReturn", mergeSortInPlace);
 logSortData("QuickSort", quickSort);
+logSortData("HeapSort", heapSort);
