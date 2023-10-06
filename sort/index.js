@@ -4,6 +4,7 @@ const { insertionSort } = require("./insertion-sort");
 const { mergeSort, mergeSortInPlace } = require("./merge-sort");
 const { quickSort } = require("./quick-sort");
 const { heapSort } = require("./heap-sort");
+const { radixSort } = require("./radix-sort");
 
 module.exports = {
   bubbleSort,
@@ -12,5 +13,6 @@ module.exports = {
   mergeSort,
   mergeSortInPlace,
   quickSort,
-  heapSort
+  heapSort,
+  radixSort
 };
