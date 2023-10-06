@@ -1,4 +1,4 @@
-const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace, quickSort, heapSort, radixSort } = require("./index");
+const { bubbleSort, selectionSort, insertionSort, mergeSort, mergeSortInPlace, quickSort, heapSort, radixSort, countingSort } = require("./index");
 
 const config = {
   SHOW_NUMBERS_LOG: false,
@@ -36,3 +36,4 @@ logSortData("MergeSortWithoutReturn", mergeSortInPlace);
 logSortData("QuickSort", quickSort);
 logSortData("HeapSort", heapSort);
 logSortData("RadixSort", radixSort);
+logSortData("CountingSort", countingSort);

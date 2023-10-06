@@ -1,4 +1,4 @@
-function countingSort(array, exp) {
+function countingSort(array = [], exp) {
   const output = new Array(array.length).fill(0);
   const count = new Array(10).fill(0);
 

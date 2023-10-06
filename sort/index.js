@@ -5,6 +5,7 @@ const { mergeSort, mergeSortInPlace } = require("./merge-sort");
 const { quickSort } = require("./quick-sort");
 const { heapSort } = require("./heap-sort");
 const { radixSort } = require("./radix-sort");
+const { countingSort } = require("./counting-sort");
 
 module.exports = {
   bubbleSort,
@@ -14,5 +15,6 @@ module.exports = {
   mergeSortInPlace,
   quickSort,
   heapSort,
-  radixSort
+  radixSort,
+  countingSort
 };
