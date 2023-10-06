@@ -19,3 +19,9 @@ Here is table of time complexities in terms of best case, average case, and wors
 | Tim Sort             | O(n)         | O(n log n)                       | O(n log n)   |
 | Cocktail Shaker Sort | O(n)         | O(n^2)                           | O(n^2)       |
 | Cycle Sort           | O(n^2)       | O(n^2)                           | O(n^2)       |
+
+To test sorting algorithms, run main.js in a Node environment.
+
+```bash
+node "{path}/algoritms/sort/main.js"
+```
