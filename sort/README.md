@@ -1,6 +1,6 @@
 # JavaScript Sorting Algorithms
 
-This folder contains various sorting algorithms implemented in JavaScript. Each algorithm is accompanied by detailed explanations and code examples.
+This folder contains various sorting algorithms implemented in JavaScript. Each algorithm is accompanied by code examples.
 
 Here is table of time complexities in terms of best case, average case, and worst case scenarios:
 
