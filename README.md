@@ -19,6 +19,18 @@ const config = {
 
 To run the code, you could simply use the Node environment or modify some parts of the code for running it on the web.
 
+Sort code run:
+
+```bash
+node "{path}/algoritms/sort/main.js"
+```
+
+Search code run:
+
+```bash
+node "{path}/algoritms/search/main.js"
+```
+
 ## Contribution
 
 Contributing to a GitHub repository under the Creative Commons Attribution 4.0 International License presents a wonderful opportunity to bolster an open-source project and participate in a thriving collaborative community. This license facilitates the sharing and adaptation of creative works, providing a robust framework for collective efforts.
