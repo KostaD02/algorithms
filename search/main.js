@@ -1,5 +1,9 @@
-const { linearSearch } = require("./linear-search");
 const { bubbleSort } = require("../sort/index");
+const {
+  linearSearch,
+  binarySearch,
+  binarySearchRecursive,
+} = require("./index");
 
 const config = {
   SHOW_NUMBERS_LOG: false,
@@ -7,10 +11,15 @@ const config = {
   PRINT_IN_TABLE: true,
   RANDOM_MAX_NUMBER: 1000,
   RANDOM_MIN_NUMBER: 1,
-  NUMBERS_SIZE: 100,
+  NUMBERS_SIZE: 1000,
 };
 
-function calculateSearchData(label, func, searchValue = randomNumberForSearch, numbersArray = numbers) {
+function calculateSearchData(
+  label,
+  func,
+  searchValue = randomNumberForSearch,
+  numbersArray = numbers
+) {
   const array = numbersArray;
   const startTime = process.hrtime();
   func(array, searchValue);
@@ -29,7 +38,11 @@ function calculateSearchData(label, func, searchValue = randomNumberForSearch, n
   return `${time}ms`;
 }
 
-const algorithms = [{ label: "LinearSearch", func: linearSearch }];
+const algorithms = [
+  { label: "LinearSearch", func: linearSearch },
+  { label: "BinarySearch", func: binarySearch },
+  { label: "BinarySearchRecursive", func: binarySearchRecursive },
+];
 
 const numbers = new Array(config.NUMBERS_SIZE)
   .fill(0)
@@ -40,11 +53,13 @@ const numbers = new Array(config.NUMBERS_SIZE)
           (config.RANDOM_MAX_NUMBER - config.RANDOM_MIN_NUMBER + 1)
       ) + 1
   );
-const randomNumberForSearch = numbers[Math.floor(Math.random() * numbers.length)];
+const randomNumberForSearch =
+  numbers[Math.floor(Math.random() * numbers.length)];
 
 bubbleSort(numbers);
 
 if (config.SHOW_NUMBERS_LOG) {
+  console.log("Search value:", randomNumberForSearch);
   console.log("Sorted array:", numbers);
 }
 
@@ -66,5 +81,7 @@ if (config.SHOW_FASTEST_TIME_ALGORITHM) {
       algorithm = algorithms[i];
     }
   }
-  console.log(`Current fastest is "${algorithm.label}" with time: "${algorithm.time}"`);
+  console.log(
+    `Current fastest is "${algorithm.label}" with time: "${algorithm.time}"`
+  );
 }
