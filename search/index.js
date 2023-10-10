@@ -1,10 +1,12 @@
 const { linearSearch } = require("./linear-search");
 const { binarySearch, binarySearchRecursive } = require("./binary-search");
 const { sentinelLinearSearch } = require("./sentinel-linear-search");
+const { jumpSearch } = require("./jump-search");
 
 module.exports = {
   linearSearch,
   binarySearch,
   binarySearchRecursive,
   sentinelLinearSearch,
+  jumpSearch,
 };

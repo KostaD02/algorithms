@@ -3,7 +3,8 @@ const {
   linearSearch,
   binarySearch,
   binarySearchRecursive,
-  sentinelLinearSearch
+  sentinelLinearSearch,
+  jumpSearch,
 } = require("./index");
 
 const config = {
@@ -41,9 +42,10 @@ function calculateSearchData(
 
 const algorithms = [
   { label: "LinearSearch", func: linearSearch },
+  { label: "SentinelLinearSearch", func: sentinelLinearSearch },
+  { label: "JumpSearch", func: jumpSearch },
   { label: "BinarySearch", func: binarySearch },
   { label: "BinarySearchRecursive", func: binarySearchRecursive },
-  { label: "SentinelLinearSearch", func: sentinelLinearSearch }
 ];
 
 const numbers = new Array(config.NUMBERS_SIZE)
