@@ -2,6 +2,7 @@ const { linearSearch } = require("./linear-search");
 const { binarySearch, binarySearchRecursive } = require("./binary-search");
 const { sentinelLinearSearch } = require("./sentinel-linear-search");
 const { jumpSearch } = require("./jump-search");
+const { ternarySearch } = require("./ternary-search");
 
 module.exports = {
   linearSearch,
@@ -9,4 +10,5 @@ module.exports = {
   binarySearchRecursive,
   sentinelLinearSearch,
   jumpSearch,
+  ternarySearch,
 };

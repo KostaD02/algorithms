@@ -5,6 +5,7 @@ const {
   binarySearchRecursive,
   sentinelLinearSearch,
   jumpSearch,
+  ternarySearch
 } = require("./index");
 
 const config = {
@@ -46,6 +47,7 @@ const algorithms = [
   { label: "JumpSearch", func: jumpSearch },
   { label: "BinarySearch", func: binarySearch },
   { label: "BinarySearchRecursive", func: binarySearchRecursive },
+  { label: "TernarySearch", func: ternarySearch }
 ];
 
 const numbers = new Array(config.NUMBERS_SIZE)
