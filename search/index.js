@@ -3,6 +3,7 @@ const { binarySearch, binarySearchRecursive } = require("./binary-search");
 const { sentinelLinearSearch } = require("./sentinel-linear-search");
 const { jumpSearch } = require("./jump-search");
 const { ternarySearch } = require("./ternary-search");
+const { fibonacciSearch } = require("./fibonacci-search");
 
 module.exports = {
   linearSearch,
@@ -11,4 +12,5 @@ module.exports = {
   sentinelLinearSearch,
   jumpSearch,
   ternarySearch,
+  fibonacciSearch,
 };
