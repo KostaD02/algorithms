@@ -37,7 +37,24 @@ function binarySearchRecursive(
   }
 }
 
+function metaBinarySearch(array = [], searchValue) {
+  const n = array.length;
+  let max = parseInt(Math.log(n - 1) / Math.log(2)) + 1;
+  let position = 0;
+  for (let i = max; i >= 0; i--) {
+    if (array[position] === searchValue) {
+      return position;
+    }
+    const newPosition = position | (1 << i);
+    if (newPosition < n && array[newPosition] <= searchValue) {
+      position = newPosition;
+    }
+  }
+  return array[position] === searchValue ? position : -1;
+}
+
 module.exports = {
   binarySearch,
   binarySearchRecursive,
+  metaBinarySearch
 };
