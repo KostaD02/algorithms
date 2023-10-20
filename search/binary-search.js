@@ -53,8 +53,23 @@ function metaBinarySearch(array = [], searchValue) {
   return array[position] === searchValue ? position : -1;
 }
 
+function exponentialSearch(array = [], searchValue) {
+  if (array[0] === searchValue) {
+    return 0;
+  }
+
+  let i = 1;
+
+  while(i < array.length && array[i] <= searchValue) {
+    i *= 2;
+  }
+
+  return binarySearchRecursive(array, searchValue, i / 2, Math.min(i, array.length - 1));
+}
+
 module.exports = {
   binarySearch,
   binarySearchRecursive,
-  metaBinarySearch
+  metaBinarySearch,
+  exponentialSearch
 };

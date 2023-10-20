@@ -8,6 +8,7 @@ const {
   ternarySearch,
   fibonacciSearch,
   metaBinarySearch,
+  exponentialSearch
 } = require("./index");
 
 const config = {
@@ -50,6 +51,7 @@ const algorithms = [
   { label: "BinarySearch", func: binarySearch },
   { label: "BinarySearchRecursive", func: binarySearchRecursive },
   { label: "MetaBinarySearch", func: metaBinarySearch },
+  { label: "ExponentialSearch", func: exponentialSearch },
   { label: "TernarySearch", func: ternarySearch },
   { label: "FibonacciSearch", func: fibonacciSearch },
 ];
